@@ -41,6 +41,7 @@ body {
 
 nav {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   font-size: 26px;
@@ -54,13 +55,21 @@ main {
 
 .nav-left-side {
   display: flex;
+  width: 50%;
+  gap: 12px;
   align-items: center;
-  gap: 20px;
+  justify-content: flex-start;
+}
+
+.nav-left-side form {
+  width: 70%;
 }
 
 .nav-right-side {
   display: flex;
-  justify-content: stretch;
+  width: 50%;
+  justify-content: flex-end;
+  margin-right: 40px;
   align-items: center;
   gap: 20px;
 }
@@ -77,12 +86,12 @@ main {
 }
 
 .search {
-  width: 500px;
+  width: 100%;
   height: 35px;
   color: var(--slate-600);
   font-size: 16px;
   font-style: normal;
-  padding: 4px 18px 4px 18px;
+  padding: 4px 18px;
   border-radius: 8px;
   border: 2px solid var(--slate-200);
 }
@@ -220,7 +229,7 @@ main {
 
 .remises {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   margin-bottom: 20px;
 }
@@ -232,7 +241,6 @@ main {
 }
 
 .product-card img {
-  display: block;
   height: 60%;
   width: 100%;
 }
@@ -699,4 +707,85 @@ select {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
+}
+
+.menu {
+  display: none;
+}
+
+.menu path {
+  fill: var(--slate-400);
+}
+
+.mobile-tabs {
+  display: none;
+}
+
+@media (max-width: 820px) {
+  header,
+  nav,
+  main {
+    width: 100%;
+  }
+
+  .menu {
+    display: block;
+    padding-left: 10px;
+  }
+
+  .logo {
+    width: 45px;
+    height: 45px;
+    margin: 0;
+  }
+
+  .nav-right-side {
+    display: none;
+  }
+
+  .nav-left-side {
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-top: 20px;
+  }
+
+  footer {
+    width: 100%;
+  }
+
+  #main-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  #main-section .side-menu {
+    display: none;
+  }
+
+  #main-section img {
+    width: 100%;
+  }
+
+  .mobile-tabs {
+    display: block;
+    text-align: center;
+    width: 100%;
+    background: var(--slate-50);
+    color: var(--slate-500);
+    border: 1px solid var(--slate-200);
+    border-radius: 8px;
+    margin-inline: auto;
+  }
+
+  .search {
+    padding: 4px 10px;
+  }
+
+  .nav-left-side form {
+    width: 60%;
+  }
 }
