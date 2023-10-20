@@ -779,6 +779,11 @@ select {
     width: 100%;
   }
 
+  body,
+  main {
+    overflow-x: hidden;
+  }
+
   .menu {
     display: block;
     padding-left: 10px;
