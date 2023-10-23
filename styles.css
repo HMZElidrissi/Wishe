@@ -725,6 +725,14 @@ select {
   fill: var(--slate-400);
 }
 
+.close {
+  display: none;
+}
+
+.close path {
+  fill: var(--slate-500);
+}
+
 .mobile-tabs {
   display: none;
 }
@@ -908,27 +916,40 @@ input:focus {
     padding-right: 20px;
   }
 
-  .logo {
-    width: 45px;
-    height: 45px;
-    margin: 0;
+  .close-show {
+    display: block;
   }
 
   .nav-mobile {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background: var(--slate-200);
-    top: 60px;
-    left: -100%;
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    background: var(--slate-100);
+    top: 0;
+    right: 100%;
     padding-top: 60px;
+    text-align: center;
+    padding-bottom: 60px;
+    transition: left 0.2s;
+  }
+
+  .nav-mobile a {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--slate-700);
   }
 
   .nav-mobile-visible {
-    left: 0;
+    right: 0;
+  }
+
+  .logo {
+    width: 45px;
+    height: 45px;
+    margin: 0;
   }
 
   .nav-right-side {
