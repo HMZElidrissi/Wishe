@@ -733,10 +733,6 @@ select {
   fill: var(--slate-500);
 }
 
-.mobile-tabs {
-  display: none;
-}
-
 .side-menu-criterias-mobile {
   display: none;
 }
@@ -861,7 +857,7 @@ input:focus {
 }
 
 .mobile-tabs {
-  display: block;
+  display: none;
   text-align: center;
   width: 100%;
   background: var(--slate-50);
@@ -943,6 +939,10 @@ input:focus {
   }
 
   .active {
+    display: block;
+  }
+
+  .mobile-tabs {
     display: block;
   }
 
