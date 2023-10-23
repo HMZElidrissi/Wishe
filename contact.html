@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishe</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-left-side">
+                <a href="index.html">
+                    <img class="logo" src="/images/logoAmazon.png" alt="Amazon Logo">
+                </a>
+                <form action="products_list.html">
+                    <input class="search" type="text" placeholder="Search for a product, brand, or category...">
+                </form>
+                <svg class="menu" width="33" height="36" viewBox="0 0 21 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0 4.5C0 3.67031 0.670312 3 1.5 3H19.5C20.3297 3 21 3.67031 21 4.5C21 5.32969 20.3297 6 19.5 6H1.5C0.670312 6 0 5.32969 0 4.5ZM0 12C0 11.1703 0.670312 10.5 1.5 10.5H19.5C20.3297 10.5 21 11.1703 21 12C21 12.8297 20.3297 13.5 19.5 13.5H1.5C0.670312 13.5 0 12.8297 0 12ZM21 19.5C21 20.3297 20.3297 21 19.5 21H1.5C0.670312 21 0 20.3297 0 19.5C0 18.6703 0.670312 18 1.5 18H19.5C20.3297 18 21 18.6703 21 19.5Z" />
+                </svg>
+            </div>
+            <div class="nav-mobile">
+                <div class="cart">
+                    <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                    <p>5</p>
+                </div>
+                <div class="country">
+                    <img class="flag" src="/images/MAR.png" alt="MAR">
+                    <p>MAR</p>
+                </div>
+                <p><a href="#">Sign In</a></p>
+                <p><a href="#">Create account</a></p>
+            </div>
+            </div>
+            <div class="nav-right-side">
+                <div class="account">
+                    <p id="sign-in"><a href="#">Sign In</a></p>
+                    <p><a href="#">Create account</a></p>
+                </div>
+                <div class="country">
+                    <img class="flag" src="/images/MAR.png" alt="MAR">
+                    <p>MAR</p>
+                </div>
+                <div class="cart">
+                    <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                    <p>5</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="contact-us-title">
+            <h1>Contact Us</h1>
+            <p>Any question or remarks? Just write us a message!</p>
+        </div>
+        <div class="contact-us">
+            <div class="contact-form">
+                <div id="error"></div>
+                <form action="#" method="get" onsubmit="return validateForm()">
+                    <input type="text" id="fullName" name="fullName" placeholder="Your full name ...">
+                    <input type="email" id="email" name="email" placeholder="E-mail address ...">
+                    <textarea id="message" name="message" placeholder="Your message ..."></textarea>
+                    <button name="submit" type="submit">Send</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <!-- &nbsp;&nbsp;&nbsp; -->
+                    <p>123 Mohammed VI Street, Rabat City, PL 45678, Morocco
+                    </p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <!-- &nbsp;&nbsp;&nbsp; -->
+                    <p>+212 641 96 81 20</p>
+                </div>
+                <div>
+                    <i class="fa-regular fa-envelope"></i>
+                    <!-- &nbsp;&nbsp;&nbsp; -->
+                    <p>hello@wishe.ma</p>
+                </div>
+                <div class="social-media-wrapper">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <img src="images/map.png">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <ul>
+            <li>About</li>
+            <li>Support</li>
+            <li>FQA</li>
+        </ul>
+        <p>Copy right 2023</p>
+    </footer>
+</body>
+<script src="scripts.js" defer></script>
+
+</html>

@@ -733,6 +733,125 @@ select {
   display: none;
 }
 
+.contact-us-title {
+  text-align: center;
+  padding-block: 20px;
+}
+
+.contact-us-title h1 {
+  color: var(--slate-700);
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.contact-us-title p {
+  color: var(--slate-500);
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.contact-us {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-bottom: 40px;
+}
+
+.contact-form input {
+  width: 60%;
+  display: block;
+  margin: auto;
+  line-height: 45px;
+  border-radius: 8px;
+  border: 2px solid var(--slate-200);
+  padding-inline: 14px;
+  color: var(--slate-500);
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.contact-form textarea {
+  width: 60%;
+  display: block;
+  margin: auto;
+  line-height: 45px;
+  border-radius: 8px;
+  border: 2px solid var(--slate-200);
+  padding-inline: 14px;
+  color: var(--slate-500);
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.contact-form textarea,
+input:focus {
+  outline: none;
+}
+
+.contact-form input::placeholder {
+  color: var(--slate-400);
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.contact-form textarea::placeholder {
+  color: var(--slate-400);
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.contact-form button {
+  width: 16%;
+  height: 45px;
+  display: block;
+  margin: auto;
+  background-color: var(--yellow-500);
+  color: white;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+
+#error {
+  display: block;
+  margin: auto;
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--red-500);
+  margin-bottom: 10px;
+}
+
+.contact-info {
+  display: block;
+  width: 90%;
+  margin: auto;
+}
+
+.contact-info div {
+  display: flex;
+  width: 30%;
+  align-items: center;
+  gap: 20px;
+  font-size: 16px;
+  color: var(--slate-700);
+}
+
+.contact-info div i {
+  font-size: 18px;
+}
+
+.social-media-wrapper {
+  margin-top: 20px;
+}
+
+.contact-info img {
+  margin-top: 25px;
+}
+
 @media (max-width: 1087px) {
   #product-summary {
     display: flex;
@@ -932,5 +1051,30 @@ select {
   #shipping-info .summary-container,
   #shipping-info .shipping-items-container {
     width: 80%;
+  }
+
+  .contact-us {
+    display: block;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+
+  .contact-info div {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    gap: 20px;
+    font-size: 16px;
+    color: var(--slate-700);
+  }
+
+  .contact-info img {
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+  }
+
+  .contact-form button {
+    width: 65%;
   }
 }
