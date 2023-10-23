@@ -35,3 +35,12 @@ close.addEventListener("click", () => {
   close.classList.remove("close-show");
   body.classList.remove("body-no-scroll");
 });
+
+const categoriesItems = document.querySelectorAll(".categories-collapse");
+const categoriesMenu = document.querySelector(".categories-collapse-wrapper");
+
+categoriesMenu.addEventListener("click", () => {
+  categoriesItems.forEach((item) => {
+    item.classList.toggle("active");
+  });
+});
