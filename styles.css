@@ -946,6 +946,10 @@ input:focus {
     right: 0;
   }
 
+  .body-no-scroll {
+    overflow: hidden;
+  }
+
   .logo {
     width: 45px;
     height: 45px;
