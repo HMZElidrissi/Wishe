@@ -44,3 +44,50 @@ categoriesMenu.addEventListener("click", () => {
     item.classList.toggle("active");
   });
 });
+
+function calculate_prices() {
+  const productPrice = document.querySelectorAll(".product-price");
+  const shippingFee = document.querySelectorAll(".shipping-fee");
+  const quantities = document.querySelectorAll("span.quantity");
+  const totalPrices = document.querySelector("#total-prices");
+  const totalFees = document.querySelector("#total-fees");
+  const total = document.querySelector("#total");
+  let totalP = 0;
+  let totalF = 0;
+
+  productPrice.forEach((item, index) => {
+    const qtt = parseInt(quantities[index].textContent);
+    const price = parseFloat(item.textContent.replace("$", ""));
+    totalP += price * qtt;
+  });
+
+  shippingFee.forEach((item, index) => {
+    const qtt = parseInt(quantities[index].textContent);
+    const shipFee = parseFloat(item.textContent.replace("Shipping: $", ""));
+    totalF += shipFee * qtt;
+  });
+
+  totalPrices.textContent = "USD " + totalP.toFixed(2);
+  totalFees.textContent = "USD " + totalF.toFixed(2);
+  total.textContent = "USD " + (totalP + totalF).toFixed(2);
+}
+
+function subtract(el) {
+  let quantity = el.nextElementSibling.querySelector(".quantity");
+  let currentQtt = parseInt(quantity.textContent);
+
+  if (currentQtt > 0) {
+    currentQtt--;
+    quantity.textContent = currentQtt;
+    calculate_prices();
+  }
+}
+
+function add(el) {
+  let quantity = el.previousElementSibling.querySelector(".quantity");
+  let currentQtt = parseInt(quantity.textContent);
+
+  currentQtt++;
+  quantity.textContent = currentQtt;
+  calculate_prices();
+}

@@ -13,7 +13,7 @@
         rel="stylesheet">
 </head>
 
-<body>
+<body onload="calculate_prices()">
     <header>
         <nav>
             <div class="nav-left-side">
@@ -55,7 +55,6 @@
                     <p>MAR</p>
                 </div>
             </div>
-            </div>
             <div class="nav-right-side">
                 <div class="account">
                     <p id="sign-in"><a href="#">Sign In</a></p>
@@ -89,8 +88,8 @@
                             <div>
                                 <p class="bold">Product Name</p>
                                 <p class="badge">Selected Variants</p>
-                                <p class="price">$1900</p>
-                                <small>Shipping: $18</small>
+                                <p class="price product-price">$1900</p>
+                                <small class="shipping-fee">Shipping: $18</small>
                             </div>
                         </div>
                         <div class="shipping-options">
@@ -99,8 +98,9 @@
                                 <i class="fa-regular fa-heart"></i>
                             </div>
                             <div class="quantity">
-                                <i class="slate fa-solid fa-circle-minus"></i>&nbsp; 1 &nbsp;<i
-                                    class="yellow fa-solid fa-circle-plus"></i>
+                                <i class="slate fa-solid fa-circle-minus" onclick="subtract(this)"></i>
+                                <span>&nbsp; <span class="quantity">1</span> &nbsp;</span>
+                                <i class="yellow fa-solid fa-circle-plus" onclick="add(this)"></i>
                             </div>
                         </div>
                     </div>
@@ -113,8 +113,8 @@
                             <div>
                                 <p class="bold">Product Name</p>
                                 <p class="badge">Selected Variants</p>
-                                <p class="price">$1900</p>
-                                <small>Shipping: $18</small>
+                                <p class="price product-price">$1900</p>
+                                <small class="shipping-fee">Shipping: $18</small>
                             </div>
                         </div>
                         <div class="shipping-options">
@@ -123,8 +123,9 @@
                                 <i class="fa-regular fa-heart"></i>
                             </div>
                             <div class="quantity">
-                                <i class="slate fa-solid fa-circle-minus"></i>&nbsp; 1 &nbsp;<i
-                                    class="yellow fa-solid fa-circle-plus"></i>
+                                <i class="slate fa-solid fa-circle-minus" onclick="subtract(this)"></i>
+                                <span>&nbsp; <span class="quantity">1</span> &nbsp;</span>
+                                <i class="yellow fa-solid fa-circle-plus" onclick="add(this)"></i>
                             </div>
                         </div>
                     </div>
@@ -137,8 +138,8 @@
                             <div>
                                 <p class="bold">Product Name</p>
                                 <p class="badge">Selected Variants</p>
-                                <p class="price">$1900</p>
-                                <small>Shipping: $18</small>
+                                <p class="price product-price">$1900</p>
+                                <small class="shipping-fee">Shipping: $18</small>
                             </div>
                         </div>
                         <div class="shipping-options">
@@ -147,8 +148,9 @@
                                 <i class="fa-regular fa-heart"></i>
                             </div>
                             <div class="quantity">
-                                <i class="slate fa-solid fa-circle-minus"></i>&nbsp; 1 &nbsp;<i
-                                    class="yellow fa-solid fa-circle-plus"></i>
+                                <i class="slate fa-solid fa-circle-minus" onclick="subtract(this)"></i>
+                                <span>&nbsp; <span class="quantity">1</span> &nbsp;</span>
+                                <i class="yellow fa-solid fa-circle-plus" onclick="add(this)"></i>
                             </div>
                         </div>
                     </div>
@@ -166,9 +168,9 @@
                             <li class="bold">Total</li>
                         </ul>
                         <ul>
-                            <li>USD 537.00</li>
-                            <li>USD 13.00</li>
-                            <li class="bold">USD 550.00 </li>
+                            <li id="total-prices"></li>
+                            <li id="total-fees"></li>
+                            <li id="total" class="bold"></li>
                         </ul>
                     </div>
                     <a class="btn-primary" href="#">Add to Cart</a>
