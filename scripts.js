@@ -73,7 +73,7 @@ function calculate_prices() {
 }
 
 function subtract(el) {
-  let quantity = el.nextElementSibling.querySelector(".quantity");
+  let quantity = el.nextElementSibling.querySelector("span.quantity");
   let currentQtt = parseInt(quantity.textContent);
 
   if (currentQtt > 0) {
@@ -84,10 +84,28 @@ function subtract(el) {
 }
 
 function add(el) {
-  let quantity = el.previousElementSibling.querySelector(".quantity");
+  let quantity = el.previousElementSibling.querySelector("span.quantity");
   let currentQtt = parseInt(quantity.textContent);
 
   currentQtt++;
   quantity.textContent = currentQtt;
   calculate_prices();
+}
+
+function show_sidebar() {
+  const sidebar = document.querySelector(".sidebar");
+  const closeSidebar = document.querySelector(".close-sidebar");
+
+  sidebar.classList.add("sidebar-visible");
+  closeSidebar.classList.add("close-sidebar-show");
+  body.classList.add("body-no-scroll");
+}
+
+function close_sidebar() {
+  const sidebar = document.querySelector(".sidebar");
+  const closeSidebar = document.querySelector(".close-sidebar");
+
+  sidebar.classList.remove("sidebar-visible");
+  closeSidebar.classList.remove("close-sidebar-show");
+  body.classList.remove("body-no-scroll");
 }
