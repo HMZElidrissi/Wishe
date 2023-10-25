@@ -4,8 +4,9 @@ function validateForm() {
     message("A name is required!!");
     return false;
   }
-  if (p.email.value == "") {
-    message("An e-mail is required!!");
+  var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  if (!emailPattern.test(p.email.value)) {
+    message("This is not a valid email!!");
     return false;
   }
   if (p.message.value == "") {
