@@ -1234,6 +1234,17 @@ input:focus {
 }
 
 @media (max-width: 464px) {
+  header,
+  nav,
+  main {
+    width: 95%;
+  }
+
+  body,
+  main {
+    overflow-x: hidden;
+  }
+
   .menu {
     padding: 0;
   }
@@ -1258,5 +1269,38 @@ input:focus {
   #product-summary .side-menu {
     justify-content: center;
     align-items: center;
+  }
+
+  .sidebar-container {
+    font-size: 12px;
+  }
+
+  .sidebar-container .badge {
+    font-size: 8px;
+  }
+
+  .sidebar-container .price {
+    font-size: 14px;
+  }
+
+  .item-shipping-options .quantity {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+
+  .sidebar {
+    width: 80%;
+  }
+
+  .sidebar-container {
+    width: 60%;
+  }
+
+  .nav-mobile {
+    width: 70%;
+  }
+
+  .shipping-options .quantity {
+    font-size: 16px;
   }
 }
