@@ -92,6 +92,28 @@ function add(el) {
   calculate_prices();
 }
 
+function add_mobile(el) {
+  let quantity = el
+    .closest(".item-shipping-options")
+    .querySelector("span.quantity");
+  let currentQtt = parseInt(quantity.textContent);
+
+  currentQtt++;
+  quantity.textContent = currentQtt;
+}
+
+function subtract_mobile(el) {
+  let quantity = el
+    .closest(".item-shipping-options")
+    .querySelector("span.quantity");
+  let currentQtt = parseInt(quantity.textContent);
+
+  if (currentQtt > 0) {
+    currentQtt--;
+    quantity.textContent = currentQtt;
+  }
+}
+
 function show_sidebar() {
   const sidebar = document.querySelector(".sidebar");
   const closeSidebar = document.querySelector(".close-sidebar");
